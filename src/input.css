@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.form-input,
+.form-checkbox,
+.form-textarea,
+.form-select,
+.form-multiselect {
+  @apply focus:ring-0;
+}

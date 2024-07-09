@@ -2,10 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-.form-input,
-.form-checkbox,
-.form-textarea,
-.form-select,
-.form-multiselect {
-  @apply focus:ring-0;
+@layer components {
+  .form-input,
+  .form-checkbox,
+  .form-textarea,
+  .form-select,
+  .form-multiselect {
+    @apply focus:ring-0;
+  }
+
+  .line-animate {
+    @apply ml-2 relative inline-block after:absolute after:w-0 after:h-0.5 after:left-0 after:top-3 after:bg-gray-700 after:ease-out after:duration-150 after:hover:w-full;
+  }
+  .task-box {
+    @apply bg-slate-200 rounded-full mb-2  cursor-pointer hover:bg-slate-300;
+  }
+  .close {
+    @apply ml-auto w-7 h-7 text-lg text-gray-300  ease-out duration-100 hover:text-black bg-slate-400 rounded-full text-center;
+  }
+  .form-checkbox {
+    @apply rounded-full p-3 border-2 border-teal-800 text-teal-800;
+  }
+  .list-box {
+    @apply flex items-center;
+  }
 }

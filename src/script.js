@@ -37,6 +37,13 @@ const addTask = function () {
   close.innerHTML = '&#x2715;';
 
   inputEl.value = '';
+
+  // Delete task
+  close.addEventListener('click', () => {
+    ul.remove();
+  });
+
+  //
 };
 
 // Events

@@ -904,27 +904,13 @@ select {
 }
 
 .line-animate {
-  position: relative;
   margin-left: 0.5rem;
-  display: inline-block;
 }
 
-.line-animate::after {
-  position: absolute;
-  left: 0px;
-  top: 0.75rem;
-  height: 0.125rem;
-  width: 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-  transition-duration: 150ms;
-  content: var(--tw-content);
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.line-animate:hover::after {
-  content: var(--tw-content);
-  width: 100%;
+.checked {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+  text-decoration-line: line-through;
 }
 
 .task-box {
@@ -1087,12 +1073,4 @@ select {
 .hover\:bg-orange-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(194 65 12 / var(--tw-bg-opacity));
-}
-
-.peer:has(:checked) ~ .peer-has-\[\:checked\]\:hidden {
-  display: none;
-}
-
-.peer:has(:cheked) ~ .peer-has-\[\:cheked\]\:line-through {
-  text-decoration-line: line-through;
 }

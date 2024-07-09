@@ -8,42 +8,47 @@ const mainBox = document.querySelector('.main-box');
 // Functions
 const addTask = function () {
   const task = inputEl.value;
-  // Add ul
-  const ul = document.createElement('ul');
-  ul.classList.add('task-box');
-  mainBox.appendChild(ul);
 
-  // Add li
-  const li = document.createElement('li');
-  li.classList.add('list-box');
-  ul.appendChild(li);
+  // Condtion
+  if (task === '') {
+    alert('wirte your task please');
+  } else {
+    // Add ul
+    const ul = document.createElement('ul');
+    ul.classList.add('task-box');
+    mainBox.appendChild(ul);
 
-  // Add input(checkbox)
-  const input = document.createElement('input');
-  input.classList.add('form-checkbox');
-  input.setAttribute('type', 'checkbox');
-  li.appendChild(input);
+    // Add li
+    const li = document.createElement('li');
+    li.classList.add('list-box');
+    ul.appendChild(li);
 
-  // Add span
-  const span = document.createElement('span');
-  span.classList.add('line-animate');
-  span.innerText = task;
-  li.appendChild(span);
+    // Add input(checkbox)
+    const input = document.createElement('input');
+    input.classList.add('form-checkbox');
+    input.setAttribute('type', 'checkbox');
+    li.appendChild(input);
 
-  // Add close
-  const close = document.createElement('span');
-  close.classList.add('close');
-  li.appendChild(close);
-  close.innerHTML = '&#x2715;';
+    // Add span
+    const span = document.createElement('span');
+    span.classList.add('line-animate');
+    span.innerText = task;
+    li.appendChild(span);
 
-  inputEl.value = '';
+    // Add close
+    const close = document.createElement('span');
+    close.classList.add('close');
+    li.appendChild(close);
+    close.innerHTML = '&#x2715;';
 
-  // Delete task
-  close.addEventListener('click', () => {
-    ul.remove();
-  });
+    inputEl.value = '';
 
-  //
+    // Delete task
+    close.addEventListener('click', () => ul.remove());
+
+    // Checked
+    input.addEventListener('click', () => span.classList.toggle('checked'));
+  }
 };
 
 // Events

@@ -12,7 +12,10 @@
   }
 
   .line-animate {
-    @apply ml-2 relative inline-block after:absolute after:w-0 after:h-0.5 after:left-0 after:top-3 after:bg-gray-700 after:ease-out after:duration-150 after:hover:w-full;
+    @apply ml-2;
+  }
+  .checked {
+    @apply text-gray-500 line-through;
   }
   .task-box {
     @apply bg-slate-200 rounded-full mb-2  cursor-pointer hover:bg-slate-300;
